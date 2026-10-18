@@ -6,7 +6,7 @@
     "logo": "https://files.catbox.moe/2yx5h1.png",
     "logoIcon": "https://files.catbox.moe/2yx5h1.png",
     "font": "IBM Plex Sans Arabic",
-    "primaryColor": "#cbcaa5",
+    "primaryColor": "##334d50",
     "baseCurrency": "SAR",
     "defaultCurrency": "SAR",
     "discordInvite": "https://discord.gg/razq",

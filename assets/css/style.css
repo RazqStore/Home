@@ -15,7 +15,7 @@
   color-scheme:light;
 }
 [data-theme="dark"]{
-  --bg:#111a2e;--surface:#16213a;--surface-2:#1d2a47;--text:#f3f4f6;--muted:#94a3b8;--border:#233150;
+    --bg:#18181b;--surface:#222225;--surface-2:#2c2c30;--text:#f4f4f5;--muted:#a1a1aa;--border:#323236;
   --shadow:none;--shadow-lg:0 20px 50px rgba(0,0,0,.5);color-scheme:dark;
 }
 *{box-sizing:border-box;margin:0;padding:0}

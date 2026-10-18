@@ -127,7 +127,22 @@
       "icon": "tv"
     }
   ],
-  "products": [],
+  "products": [
+    {
+      "id": "p9UG3k6u",
+      "name": "منتج جديد",
+      "label": "",
+      "category": "discord",
+      "price": 0,
+      "image": "",
+      "icon": "package",
+      "description": "",
+      "note": "",
+      "fields": [],
+      "options": [],
+      "active": true
+    }
+  ],
   "coupons": [
     {
       "code": "WELCOME10",

@@ -693,13 +693,33 @@
     if (fn) fn();
     icons();
   };
-
+  async function loadStoreData() {
+    // 1) نسخة المالك بعد النشر مباشرة (صالحة 10 دقائق)
+    const fresh = LS.get('store_fresh', null);
+    if (fresh && Date.now() - fresh.t < 10 * 60 * 1000) return fresh.data;
+    // 2) من GitHub مباشرة (بدون انتظار بناء الموقع)
+    const g = Object.assign({}, CFG.github || {});
+    g.branch = g.branch || 'main';
+    if ((!g.owner || !g.repo) && location.hostname.endsWith('github.io')) {
+      g.owner = g.owner || location.hostname.split('.')[0];
+      const seg = location.pathname.split('/').filter(Boolean)[0];
+      g.repo = g.repo || (seg && !seg.endsWith('.html') ? seg : location.hostname);
+    }
+    if (g.owner && g.repo) {
+      try {
+        const r = await fetch(`https://api.github.com/repos/${g.owner}/${g.repo}/contents/data/store.json?ref=${encodeURIComponent(g.branch)}`, { headers: { Accept: 'application/vnd.github.raw+json' } });
+        if (r.ok) return await r.json();
+      } catch (e) {}
+    }
+    // 3) الملف المحلي
+    const r = await fetch('data/store.json?v=' + Date.now(), { cache: 'no-store' });
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    return r.json();
+  }
   App.init = async function (page) {
     App.page = page;
     try {
-      const r = await fetch('data/store.json?v=' + Date.now(), { cache: 'no-store' });
-      if (!r.ok) throw new Error('HTTP ' + r.status);
-      App.data = await r.json();
+      App.data = await loadStoreData();
     } catch (e) {
       $('#app').innerHTML = `<div class="gate"><div class="card"><h3>تعذّر تحميل بيانات المتجر</h3><p class="muted" style="margin-top:8px">تأكد من وجود الملف data/store.json وأنك تفتح الموقع عبر رابط (GitHub Pages أو خادم محلي) وليس بفتح الملف مباشرة.</p></div></div>`;
       return;

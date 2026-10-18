@@ -135,7 +135,7 @@
       }
       sha = res.content.sha;
       dirty = false;
-      App.data = JSON.parse(JSON.stringify(D));
+      LS.set('store_fresh', { t: Date.now(), data: D });
       toast('تم النشر ✓ يظهر التحديث في الموقع خلال دقيقة تقريباً', 'success');
     } catch (e) {
       toast('فشل النشر: ' + e.message, 'error');

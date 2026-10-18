@@ -15,82 +15,220 @@
     "telegram": "",
     "whatsapp": "",
     "phone": "",
-    "paymentMethods": ["ومض", "كي نت"],
+    "paymentMethods": [
+      "ومض",
+      "كي نت"
+    ],
     "checkoutSteps": [
       "ادخل سيرفر الديسكورد",
       "افتح تذكرة من روم الطلبات",
       "أرسل رقم الطلب وأكمل الدفع مع الإدارة"
     ],
     "features": [
-      { "icon": "truck", "title": "شحن سريع", "text": "تسليم خلال دقائق بعد تأكيد الدفع" },
-      { "icon": "shield-check", "title": "دفع آمن", "text": "بياناتك محمية بالكامل" },
-      { "icon": "rotate-ccw", "title": "إرجاع سهل", "text": "ضمان على جميع المنتجات" },
-      { "icon": "headphones", "title": "دعم متواصل", "text": "نرد عليك في أي وقت" }
+      {
+        "icon": "truck",
+        "title": "شحن سريع",
+        "text": "تسليم خلال دقائق بعد تأكيد الدفع"
+      },
+      {
+        "icon": "shield-check",
+        "title": "دفع آمن",
+        "text": "بياناتك محمية بالكامل"
+      },
+      {
+        "icon": "rotate-ccw",
+        "title": "إرجاع سهل",
+        "text": "ضمان على جميع المنتجات"
+      },
+      {
+        "icon": "headphones",
+        "title": "دعم متواصل",
+        "text": "نرد عليك في أي وقت"
+      }
     ]
   },
   "currencies": [
-    { "code": "SAR", "name": "ريال سعودي", "symbol": "ر.س", "flag": "sa", "rate": 1, "decimals": 2 },
-    { "code": "USD", "name": "دولار أمريكي", "symbol": "$", "flag": "us", "rate": 0.2667, "decimals": 2 },
-    { "code": "EUR", "name": "يورو", "symbol": "€", "flag": "eu", "rate": 0.23, "decimals": 2 },
-    { "code": "AED", "name": "درهم إماراتي", "symbol": "د.إ", "flag": "ae", "rate": 0.9793, "decimals": 2 },
-    { "code": "KWD", "name": "دينار كويتي", "symbol": "د.ك", "flag": "kw", "rate": 0.0818, "decimals": 2 },
-    { "code": "BHD", "name": "دينار بحريني", "symbol": "د.ب", "flag": "bh", "rate": 0.1005, "decimals": 2 },
-    { "code": "QAR", "name": "ريال قطري", "symbol": "ر.ق", "flag": "qa", "rate": 0.9707, "decimals": 2 },
-    { "code": "OMR", "name": "ريال عماني", "symbol": "ر.ع", "flag": "om", "rate": 0.1026, "decimals": 2 }
+    {
+      "code": "SAR",
+      "name": "ريال سعودي",
+      "symbol": "ر.س",
+      "flag": "sa",
+      "rate": 1,
+      "decimals": 2
+    },
+    {
+      "code": "USD",
+      "name": "دولار أمريكي",
+      "symbol": "$",
+      "flag": "us",
+      "rate": 0.2667,
+      "decimals": 2
+    },
+    {
+      "code": "EUR",
+      "name": "يورو",
+      "symbol": "€",
+      "flag": "eu",
+      "rate": 0.23,
+      "decimals": 2
+    },
+    {
+      "code": "AED",
+      "name": "درهم إماراتي",
+      "symbol": "د.إ",
+      "flag": "ae",
+      "rate": 0.9793,
+      "decimals": 2
+    },
+    {
+      "code": "KWD",
+      "name": "دينار كويتي",
+      "symbol": "د.ك",
+      "flag": "kw",
+      "rate": 0.0818,
+      "decimals": 2
+    },
+    {
+      "code": "BHD",
+      "name": "دينار بحريني",
+      "symbol": "د.ب",
+      "flag": "bh",
+      "rate": 0.1005,
+      "decimals": 2
+    },
+    {
+      "code": "QAR",
+      "name": "ريال قطري",
+      "symbol": "ر.ق",
+      "flag": "qa",
+      "rate": 0.9707,
+      "decimals": 2
+    },
+    {
+      "code": "OMR",
+      "name": "ريال عماني",
+      "symbol": "ر.ع",
+      "flag": "om",
+      "rate": 0.1026,
+      "decimals": 2
+    }
   ],
   "categories": [
-    { "id": "discord", "name": "منتجات دسكورد", "image": "", "icon": "gamepad-2" },
-    { "id": "subs", "name": "الاشتراكات الرقمية", "image": "", "icon": "tv" }
+    {
+      "id": "discord",
+      "name": "منتجات دسكورد",
+      "image": "",
+      "icon": "gamepad-2"
+    },
+    {
+      "id": "subs",
+      "name": "الاشتراكات الرقمية",
+      "image": "",
+      "icon": "tv"
+    }
   ],
   "products": [
     {
-      "id": "osnsubs1", "name": "اشتراكات osn", "label": "اشتراكات +osn", "category": "subs",
-      "price": 16.5, "image": "", "icon": "tv",
-      "description": "اشتراك رسمي على حسابك.\nالتفعيل بعد تأكيد الدفع مباشرة.",
-      "note": "برجاء كتابة الإيميل المراد تفعيل الاشتراك فيه",
-      "fields": [{ "label": "الإيميل", "placeholder": "الإيميل", "type": "email", "required": true }],
-      "options": [{ "name": "شهر", "price": 16.5 }, { "name": "3 شهور", "price": 45 }],
-      "active": true
-    },
-    {
-      "id": "osnfull6", "name": "+osn حساب كامل 6 شهور", "label": "مدة ست شهور osn", "category": "subs",
-      "price": 15.75, "image": "", "icon": "tv",
+      "id": "osnfull6",
+      "name": "+osn حساب كامل 6 شهور",
+      "label": "مدة ست شهور osn",
+      "category": "subs",
+      "price": 15.75,
+      "image": "",
+      "icon": "tv",
       "description": "حساب كامل لمدة 6 شهور.",
       "note": "برجاء كتابة الإيميل المراد تفعيل الاشتراك فيه",
-      "fields": [{ "label": "الإيميل", "placeholder": "الإيميل", "type": "email", "required": true }],
-      "options": [], "active": true
-    },
-    {
-      "id": "nflxprof", "name": "نتفلكس ( ملف )", "label": "اشتراك نتفلكس ( شهر )", "category": "subs",
-      "price": 12, "image": "", "icon": "clapperboard",
-      "description": "ملف خاص فيك على حساب نتفلكس.",
-      "note": "", "fields": [],
-      "options": [{ "name": "شهر", "price": 12 }, { "name": "3 شهور", "price": 33 }],
+      "fields": [
+        {
+          "label": "الإيميل",
+          "placeholder": "الإيميل",
+          "type": "email",
+          "required": true
+        }
+      ],
+      "options": [],
       "active": true
     },
     {
-      "id": "nitro3ml", "name": "نيترو ثلاث شهور رابط", "label": "نيترو 3 شهور ( رابط )", "category": "discord",
-      "price": 11, "image": "", "icon": "rocket",
-      "description": "رابط تفعيل نيترو لمدة 3 شهور.",
-      "note": "", "fields": [], "options": [], "active": true
+      "id": "nflxprof",
+      "name": "نتفلكس ( ملف )",
+      "label": "اشتراك نتفلكس ( شهر )",
+      "category": "subs",
+      "price": 12,
+      "image": "",
+      "icon": "clapperboard",
+      "description": "ملف خاص فيك على حساب نتفلكس.",
+      "note": "",
+      "fields": [],
+      "options": [
+        {
+          "name": "شهر",
+          "price": 12
+        },
+        {
+          "name": "3 شهور",
+          "price": 33
+        }
+      ],
+      "active": true
     },
     {
-      "id": "dcboost1", "name": "بوستات دسكورد", "label": "بوستات سيرفر", "category": "discord",
-      "price": 13, "image": "", "icon": "zap",
+      "id": "nitro3ml",
+      "name": "نيترو ثلاث شهور رابط",
+      "label": "نيترو 3 شهور ( رابط )",
+      "category": "discord",
+      "price": 11,
+      "image": "",
+      "icon": "rocket",
+      "description": "رابط تفعيل نيترو لمدة 3 شهور.",
+      "note": "",
+      "fields": [],
+      "options": [],
+      "active": true
+    },
+    {
+      "id": "dcboost1",
+      "name": "بوستات دسكورد",
+      "label": "بوستات سيرفر",
+      "category": "discord",
+      "price": 13,
+      "image": "",
+      "icon": "zap",
       "description": "بوستات لسيرفرك في الديسكورد.",
       "note": "اكتب رابط دعوة السيرفر",
-      "fields": [{ "label": "رابط السيرفر", "placeholder": "https://discord.gg/...", "type": "url", "required": true }],
-      "options": [], "active": true
+      "fields": [
+        {
+          "label": "رابط السيرفر",
+          "placeholder": "https://discord.gg/...",
+          "type": "url",
+          "required": true
+        }
+      ],
+      "options": [],
+      "active": true
     },
     {
-      "id": "nitrogft", "name": "نيترو قفت شهر", "label": "نيترو قفت ( شهر )", "category": "discord",
-      "price": 24.5, "image": "", "icon": "gift",
+      "id": "nitrogft",
+      "name": "نيترو قفت شهر",
+      "label": "نيترو قفت ( شهر )",
+      "category": "discord",
+      "price": 24.5,
+      "image": "",
+      "icon": "gift",
       "description": "نيترو قفت لمدة شهر يُرسل لحسابك.",
-      "note": "", "fields": [], "options": [], "active": true
+      "note": "",
+      "fields": [],
+      "options": [],
+      "active": true
     }
   ],
   "coupons": [
-    { "code": "WELCOME10", "type": "percent", "value": 10, "active": false }
+    {
+      "code": "WELCOME10",
+      "type": "percent",
+      "value": 10,
+      "active": false
+    }
   ],
   "reviews": []
 }
